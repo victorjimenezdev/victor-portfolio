@@ -51,8 +51,8 @@ const renderGrid = (elementId, data, config = { showLinkButton: true, isWork: fa
   grid.innerHTML = data.map(project => `
         <article class="glass-panel project-card" style="overflow: hidden; display: flex; flex-direction: column; height: 100%;">
             <div class="skeleton" style="height: 200px; overflow: hidden; position: relative; border-radius: 8px 8px 0 0;">
-                ${config.isWork ? `<a href="${project.link}" target="_blank" style="display:block; height:100%;">` : ''}
-                <img src="${project.image}" alt="${project.title}" loading="lazy" class="img-loading"
+                ${config.isWork ? `<a href="${project.link}" target="_blank" rel="noopener" style="display:block; height:100%;" aria-label="View ${project.title}">` : ''}
+                <img src="${project.image}" alt="${project.title} Preview" loading="lazy" class="img-loading" width="400" height="225"
                      style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"
                      onload="this.classList.add('img-loaded'); this.parentElement.closest('.skeleton').classList.remove('skeleton');"
                      onerror="this.src='https://via.placeholder.com/400x225?text=No+Preview'; this.parentElement.closest('.skeleton').classList.remove('skeleton');">
@@ -76,7 +76,7 @@ const renderGrid = (elementId, data, config = { showLinkButton: true, isWork: fa
                 </p>
                 
                 ${config.showLinkButton ? `
-                <a href="${project.link}" target="_blank" class="btn" style="background: rgba(255,255,255,0.05); justify-content: center; width: 100%; margin-top: auto; border: 1px solid var(--card-border);">
+                <a href="${project.link}" target="_blank" rel="noopener" class="btn" style="background: rgba(255,255,255,0.05); justify-content: center; width: 100%; margin-top: auto; border: 1px solid var(--card-border);" aria-label="View Code for ${project.title}">
                     View Code
                 </a>
                 ` : ''}
