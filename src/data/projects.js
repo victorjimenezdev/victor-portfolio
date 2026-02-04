@@ -27,6 +27,24 @@ export const workProjects = [
     image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.sonesta.com/',
     featured: true
   },
+  {
+    id: 'tcm',
+    title: 'Turner Classic Movies',
+    description: 'Movie entertainment website.',
+    tags: ['Entertainment', 'Media'],
+    link: 'https://www.tcm.com/',
+    image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.tcm.com/',
+    featured: true
+  },
+  {
+    id: 'adult-swim',
+    title: 'Adult Swim',
+    description: 'Where to Watch - Entertainment portal.',
+    tags: ['Entertainment', 'Media'],
+    link: 'https://www.adultswim.com/where-to-watch',
+    image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.adultswim.com/where-to-watch',
+    featured: true
+  },
 
   // New Additions
   { id: 'arcadia', title: 'Arcadia University', description: 'University website platform.', tags: ['Education', 'Drupal'], link: 'https://www.arcadia.edu/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.arcadia.edu/' },
@@ -98,15 +116,7 @@ export const workProjects = [
     image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://canon.com.pa/home',
     featured: false
   },
-  {
-    id: 'tcm',
-    title: 'Turner Classic Movies',
-    description: 'Movie entertainment website.',
-    tags: ['Entertainment', 'Media'],
-    link: 'https://www.tcm.com/',
-    image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.tcm.com/',
-    featured: false
-  },
+
   {
     id: 'gestion-humana',
     title: 'Gestion Humana',
