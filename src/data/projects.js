@@ -374,10 +374,10 @@ export const personalProjects = [
   {
     id: 'project-context-connector',
     title: 'Project Context Connector',
-    description: 'Core PHP connector for project context management.',
-    tags: ['PHP', 'Backend', 'Tools'],
+    description: 'Maintainer of this security-focused, read-only JSON snapshot endpoint for Drupal sites. Used in automation and CI workflows to provide context for AI agents and external tools.',
+    image: 'https://via.placeholder.com/600x400/1e1e2e/6c5ce7?text=Context+Connector',
+    tags: ['Drupal', 'Module', 'Automation', 'CI/CD'],
     link: 'https://github.com/victorjimenezdev/project_context_connector',
-    image: 'https://placehold.co/600x400/1e1e2e/6c5ce7?text=Context+Connector',
     featured: false
   },
   {
