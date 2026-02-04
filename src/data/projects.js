@@ -1,4 +1,23 @@
 export const workProjects = [
+  // User Priority: HBO, CN, Sonesta
+  {
+    id: 'hbomax',
+    title: 'HBO Max',
+    description: 'Streaming service landing and support pages.',
+    tags: ['Entertainment', 'Streaming'],
+    link: 'https://www.hbomax.com/',
+    image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.hbomax.com/',
+    featured: true
+  },
+  {
+    id: 'cartoon-network',
+    title: 'Cartoon Network Canada',
+    description: 'Interactive kids entertainment portal.',
+    tags: ['Entertainment', 'Media'],
+    link: 'https://www.cartoonnetwork.ca/',
+    image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.cartoonnetwork.ca/',
+    featured: true
+  },
   {
     id: 'sonesta',
     title: 'Sonesta Hotels',
@@ -6,8 +25,34 @@ export const workProjects = [
     tags: ['Web App', 'Hospitality'],
     link: 'https://www.sonesta.com/',
     image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.sonesta.com/',
-    featured: false
+    featured: true
   },
+
+  // New Additions
+  { id: 'arcadia', title: 'Arcadia University', description: 'University website platform.', tags: ['Education', 'Drupal'], link: 'https://www.arcadia.edu/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.arcadia.edu/' },
+  { id: 'grounds-sculpture', title: 'Grounds For Sculpture', description: 'Arts and museum website.', tags: ['Arts', 'Culture'], link: 'https://www.groundsforsculpture.org/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.groundsforsculpture.org/' },
+  { id: 'philaculture', title: 'Philadelphia Cultural Alliance', description: 'Cultural organization portal.', tags: ['Non-profit', 'Culture'], link: 'https://www.philaculture.org/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.philaculture.org/' },
+  { id: 'foxchase', title: 'Fox Chase Cancer Center', description: 'Healthcare and research facility.', tags: ['Health', 'Research'], link: 'https://www.foxchase.org/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.foxchase.org/' },
+  { id: 'temple-health', title: 'Temple Health', description: 'Academic health system.', tags: ['Health', 'Hospital'], link: 'https://www.templehealth.org/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.templehealth.org/' },
+  { id: 'eastern-standard', title: 'Eastern Standard', description: 'Agency website.', tags: ['Agency', 'Corporate'], link: 'https://www.easternstandard.com/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.easternstandard.com/' },
+  { id: 'radial', title: 'Radial', description: 'Omnichannel commerce technology.', tags: ['Technology', 'B2B'], link: 'https://www.radial.com/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.radial.com/' },
+  { id: 'transfr', title: 'Transfr Inc', description: 'VR training solutions.', tags: ['Tech', 'Education'], link: 'https://transfrinc.com/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://transfrinc.com/' },
+  { id: 'king-university', title: 'King University', description: 'Higher education portal.', tags: ['Education', 'University'], link: 'http://www.king.edu', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/http://www.king.edu' },
+  { id: 'motor', title: 'MOTOR Information Systems', description: 'Automotive data solutions.', tags: ['Automotive', 'Data'], link: 'http://www.motor.com', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/http://www.motor.com' },
+  { id: 'wharton', title: 'Wharton Magazine', description: 'Business school publication.', tags: ['Education', 'Media'], link: 'https://magazine.wharton.upenn.edu', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://magazine.wharton.upenn.edu' },
+  { id: 'brickworks', title: 'Brickworks Supply', description: 'Building materials catalog.', tags: ['Construction', 'Commerce'], link: 'http://brickworkssupply.com', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/http://brickworkssupply.com' },
+  { id: 'fdu', title: 'Fairleigh Dickinson University', description: 'Private university website.', tags: ['Education', 'University'], link: 'https://www.fdu.edu/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.fdu.edu/' },
+  { id: 'glengery', title: 'Glen-Gery', description: 'Brick and stone manufacturer.', tags: ['Manufacturing', 'Corporate'], link: 'https://www.glengery.com/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.glengery.com/' },
+  { id: 'accion', title: 'Accion International', description: 'Non-profit organization.', tags: ['Non-profit', 'Global'], link: 'https://www.accion.org/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.accion.org/' },
+  { id: 'pmc-property', title: 'PMC Property Group', description: 'Property management.', tags: ['Real Estate', 'B2B'], link: 'https://www.pmcpropertygroup.com/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.pmcpropertygroup.com/' },
+  { id: 'child-usa', title: 'CHILD USA', description: 'Think tank for child protection.', tags: ['Non-profit', 'Advocacy'], link: 'https://childusa.org/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://childusa.org/' },
+  { id: 'cpr-law', title: 'Cohen, Placitella & Roth', description: 'Law firm website.', tags: ['Legal', 'B2C'], link: 'https://cprlaw.com/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://cprlaw.com/' },
+  { id: 'guildhall', title: 'Guildhall School', description: 'Music and drama school.', tags: ['Education', 'Arts'], link: 'https://www.guildhall.org/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.guildhall.org/' },
+  { id: 'knowles', title: 'Knowles Teacher Initiative', description: 'Education support organization.', tags: ['Education', 'Non-profit'], link: 'https://knowlesteachers.org/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://knowlesteachers.org/' },
+  { id: 'teaching-strategies', title: 'Teaching Strategies', description: 'Early childhood education platform.', tags: ['Education', 'SaaS'], link: 'https://teachingstrategies.com/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://teachingstrategies.com/' },
+  { id: 'pensions', title: 'Board of Pensions', description: 'Benefits and assistance program.', tags: ['Finance', 'Non-profit'], link: 'https://www.pensions.org/', image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.pensions.org/' },
+
+  // Existing Projects (Remaining)
   {
     id: 'iadb',
     title: 'Inter-American Development Bank',
@@ -54,30 +99,12 @@ export const workProjects = [
     featured: false
   },
   {
-    id: 'hbomax',
-    title: 'HBO Max',
-    description: 'Streaming service landing and support pages.',
-    tags: ['Entertainment', 'Streaming'],
-    link: 'https://www.hbomax.com/',
-    image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.hbomax.com/',
-    featured: false
-  },
-  {
     id: 'tcm',
     title: 'Turner Classic Movies',
     description: 'Movie entertainment website.',
     tags: ['Entertainment', 'Media'],
     link: 'https://www.tcm.com/',
     image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.tcm.com/',
-    featured: false
-  },
-  {
-    id: 'cartoon-network',
-    title: 'Cartoon Network Canada',
-    description: 'Interactive kids entertainment portal.',
-    tags: ['Entertainment', 'Media'],
-    link: 'https://www.cartoonnetwork.ca/',
-    image: 'https://image.thum.io/get/auth/76428-portfolio/width/600/crop/600/https://www.cartoonnetwork.ca/',
     featured: false
   },
   {
