@@ -1,6 +1,12 @@
 import './style.css'
 import { workProjects, personalProjects } from './data/projects.js'
 
+const TECH_STACK = [
+  'Drupal 10', 'WordPress', 'React', 'Next.js', 'Vite', 'Node.js',
+  'PHP 8', 'MySQL', 'Redis', 'Varnish', 'AWS', 'Docker',
+  'Lando', 'GitHub Actions', 'Tailwind', 'SASS'
+];
+
 // Main entry point
 
 const init = () => {
@@ -22,6 +28,36 @@ const init = () => {
     });
   }
 
+  // Theme Toggle Logic
+  const themeToggle = document.getElementById('theme-toggle');
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme == "light") {
+    document.body.setAttribute("data-theme", "light");
+    if (themeToggle) themeToggle.textContent = "☀️";
+  } else {
+    document.body.setAttribute("data-theme", "dark");
+    if (themeToggle) themeToggle.textContent = "🌙";
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = document.body.getAttribute("data-theme");
+      let newTheme = "light";
+      let newIcon = "☀️";
+
+      if (currentTheme === "light") {
+        newTheme = "dark";
+        newIcon = "🌙";
+      }
+
+      document.body.setAttribute("data-theme", newTheme);
+      themeToggle.textContent = newIcon;
+      localStorage.setItem("theme", newTheme);
+    });
+  }
+
   // Service Worker Registration
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -36,8 +72,16 @@ const init = () => {
   // Render Work Projects (hide button, make image clickable)
   renderGrid('work-grid', workProjects, { showLinkButton: false, isWork: true });
 
-  // Render Personal Projects (show button)
-  renderGrid('projects-grid', personalProjects, { showLinkButton: true, isWork: false });
+  // Scroll Progress Logic
+  const progressBar = document.getElementById('scroll-progress');
+  if (progressBar) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPercent = (scrollTop / scrollHeight) * 100;
+      progressBar.style.width = scrollPercent + '%';
+    });
+  }
 
   // Back to Top Logic
   const backToTopBtn = document.getElementById('back-to-top');
@@ -67,6 +111,59 @@ const init = () => {
     });
   }
 
+  // Marquee Logic
+  const marqueeTrack = document.querySelector('.tech-marquee-track');
+  if (marqueeTrack) {
+    const icons = TECH_STACK.map(tech => `
+      <div class="tech-icon">
+        <span>${tech}</span>
+      </div>
+    `).join('');
+    // Duplicate for infinite scroll
+    marqueeTrack.innerHTML = icons + icons + icons + icons;
+  }
+
+  // Modals Logic
+  const dialog = document.createElement('dialog');
+  dialog.id = 'project-modal';
+  document.body.appendChild(dialog);
+
+  dialog.addEventListener('click', (e) => {
+    if (e.target === dialog) dialog.close();
+  });
+
+  window.openProjectModal = (project) => {
+    dialog.innerHTML = `
+      <div style="text-align: left;">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 2rem;">
+          <h2 style="font-size: 2rem; color: var(--text-primary); margin: 0;">${project.title}</h2>
+          <button onclick="document.getElementById('project-modal').close()" style="background: none; border: none; color: var(--text-secondary); font-size: 2rem; cursor: pointer;">&times;</button>
+        </div>
+        
+        <img src="${project.image}" alt="${project.title}" style="width: 100%; height: 300px; object-fit: cover; border-radius: 12px; margin-bottom: 2rem; border: 1px solid var(--card-border);">
+        
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+          ${project.tags.map(tag => `
+              <span style="font-size: 0.85rem; padding: 0.3rem 0.8rem; background: rgba(108, 92, 231, 0.1); border-radius: 20px; color: var(--primary);">
+                  ${tag}
+              </span>
+          `).join('')}
+        </div>
+
+        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem;">
+          ${project.description} <br><br>
+          This project demonstrates high-performance architecture and seamless user experience.
+          Built with robust technologies to ensure scalability and accessibility.
+        </p>
+
+        <a href="${project.link}" target="_blank" rel="nofollow noreferrer noopener" class="btn btn-primary" style="width: 100%; justify-content: center;">
+          Visit Project
+        </a>
+      </div>
+    `;
+    dialog.showModal();
+  };
+
   setupScrollReveal();
 };
 
@@ -89,7 +186,10 @@ const renderGrid = (elementId, data, config = { showLinkButton: true, isWork: fa
             </div>
             
             <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">${project.title}</h3>
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; cursor: pointer; color: var(--primary);" 
+                    onclick='window.openProjectModal(${JSON.stringify(project).replace(/'/g, "&#39;")})'>
+                    ${project.title} ↗
+                </h3>
                 
                 <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
                     ${project.tags.map(tag => `
@@ -103,11 +203,17 @@ const renderGrid = (elementId, data, config = { showLinkButton: true, isWork: fa
                     ${project.description}
                 </p>
                 
-                ${config.showLinkButton ? `
-                <a href="${project.link}" target="_blank" rel="nofollow noreferrer noopener" class="btn" style="background: rgba(255,255,255,0.05); justify-content: center; width: 100%; margin-top: auto; border: 1px solid var(--card-border);" aria-label="View Code for ${project.title}">
-                    View Code
-                </a>
-                ` : ''}
+                <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+                    <button class="btn" onclick='window.openProjectModal(${JSON.stringify(project).replace(/'/g, "&#39;")})'
+                        style="background: rgba(255,255,255,0.05); justify-content: center; flex: 1; border: 1px solid var(--card-border); font-size: 0.9rem;">
+                        Details
+                    </button>
+                    ${config.showLinkButton ? `
+                    <a href="${project.link}" target="_blank" rel="nofollow noreferrer noopener" class="btn" style="background: rgba(255,255,255,0.05); justify-content: center; flex: 1; border: 1px solid var(--card-border); font-size: 0.9rem;" aria-label="View Code for ${project.title}">
+                        Code
+                    </a>
+                    ` : ''}
+                </div>
             </div>
         </article>
     `).join('');
