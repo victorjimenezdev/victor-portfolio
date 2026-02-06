@@ -6,13 +6,13 @@ const TECH_STACK = [
   { name: 'WordPress', icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.64 5.93h1.33v1.94h-1.33zm-4.75 0h1.33v1.94H6.89zm9.5 0h1.33v1.94h-1.33zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>' }, // WP W simplified
   { name: 'React', icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>' }, // React Atom simplified
   { name: 'Next.js', icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>' }, // "N" simplified
-  { name: 'Vite', icon: '⚡' },
+  { name: 'Vite', icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.5 12a.5.5 0 01.5-.5h2a.5.5 0 01.5.5v2a.5.5 0 01-.5.5H3a.5.5 0 01-.5-.5v-2zm4.5-5a.5.5 0 01.5-.5h2a.5.5 0 01.5.5v7a.5.5 0 01-.5.5H7.5a.5.5 0 01-.5-.5V7zm4.5 5a.5.5 0 01.5-.5h2a.5.5 0 01.5.5v2a.5.5 0 01-.5.5h-2a.5.5 0 01-.5-.5v-2zm4.5-5a.5.5 0 01.5-.5h2a.5.5 0 01.5.5v7a.5.5 0 01-.5.5H16.5a.5.5 0 01-.5-.5V7zM12 2L2 22h20L12 2zm0 3.5l6 12H6l6-12z"/></svg>' }, // Simulated Vite Logo
   { name: 'Node.js', icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>' },
-  { name: 'PHP 8', icon: '🐘' },
-  { name: 'MySQL', icon: '🐬' },
-  { name: 'AWS', icon: '☁️' },
-  { name: 'Docker', icon: '🐳' },
-  { name: 'GraphQL', icon: '◈' }
+  { name: 'PHP 8', icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zM8.5 14H7v-4h1.5a1.5 1.5 0 010 3H7v1zm4 0h-1.5v-4H12a1.5 1.5 0 010 3h-.5v1zm4-4h-1.5v4H15v-1.5h1.5v-1H15v-1.5z"/></svg>' }, // Simplified PHP
+  { name: 'MySQL', icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>' }, // Simplified DB Icon
+  { name: 'AWS', icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11.5a2.5 2.5 0 011.25-2.17 2.5 2.5 0 00-2.25-2.33c-1.07-.11-2.07.63-2.6 1.25-.53-.62-1.53-1.36-2.6-1.25a2.5 2.5 0 00-2.25 2.33 2.5 2.5 0 011.25 2.17c0 1.38-1.12 2.5-2.5 2.5v1.5c2.48 0 4.5-2.02 4.5-4.5h1.5c0 2.48 2.02 4.5 4.5 4.5v-1.5c-1.38 0-2.5-1.12-2.5-2.5z"/></svg>' }, // Cloud-like
+  { name: 'Docker', icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 11h2v2H4zm3 0h2v2H7zm3 0h2v2h-2zm-6 3h2v2H4zm3 0h2v2H7zm3 0h2v2h-2zm3 0h2v2h-2zm-9 3h2v2H4zm3 0h2v2H7zm3 0h2v2h-2zm3 0h2v2h-2zm3 0h2v2h-2zM2 15h1v4.5A1.5 1.5 0 004.5 21h15a1.5 1.5 0 001.5-1.5V15h1v-4.6c0-2-2-3-4-3H4c-2 0-4 1-4 3V15z"/></svg>' }, // Container-like
+  { name: 'GraphQL', icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l-9.5 5.5v11L12 24l9.5-5.5v-11L12 2zm0 2.2l7.5 4.3v8.6L12 21.4 4.5 17.1V8.5L12 4.2z"/></svg>' }
 ];
 
 // Main entry point
