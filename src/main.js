@@ -145,6 +145,10 @@ const init = () => {
   });
 
   window.openProjectModal = (project) => {
+    const techSummary = project.tags.length > 0
+      ? `Built with <strong>${project.tags.join(', ')}</strong>.`
+      : 'Built with modern web technologies.';
+
     dialog.innerHTML = `
       <div style="text-align: left;">
         <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 2rem;">
@@ -164,11 +168,10 @@ const init = () => {
 
         <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem;">
           ${project.description} <br><br>
-          This project demonstrates high-performance architecture and seamless user experience.
-          Built with robust technologies to ensure scalability and accessibility.
+          This solution is engineered for performance and scalability. ${techSummary}
         </p>
 
-        <a href="${project.link}" target="_blank" rel="nofollow noreferrer noopener" class="btn btn-primary" style="width: 100%; justify-content: center;">
+        <a href="${project.link}" target="_blank" rel="nofollow noreferrer noopener" class="btn btn-primary" style="width: 100%; justify-content: center; color: var(--text-primary);">
           Visit Project
         </a>
       </div>
