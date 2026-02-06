@@ -727,9 +727,9 @@ export const personalProjects = [
     "title": "GTM API",
     "description": "Python-based integration for Google Tag Manager API.",
     "tags": [
-      "Python",
-      "API",
-      "GTM"
+      "Python 3",
+      "REST API",
+      "Google Cloud"
     ],
     "link": "https://github.com/victorjimenezdev/gtm-api",
     "image": "https://placehold.co/600x400/1e1e2e/e17055?text=GTM+API",
@@ -740,9 +740,9 @@ export const personalProjects = [
     "title": "Project Context Connector WP",
     "description": "WordPress integration for Project Context Connector.",
     "tags": [
-      "PHP",
-      "WordPress",
-      "Integration"
+      "WordPress Plugin",
+      "PHP 8",
+      "Security"
     ],
     "link": "https://github.com/victorjimenezdev/project-context-connector-wp",
     "image": "https://placehold.co/600x400/1e1e2e/00b894?text=WP+Connector",
@@ -753,9 +753,9 @@ export const personalProjects = [
     "title": "VideoTube",
     "description": "A PHP-based video sharing platform application.",
     "tags": [
-      "PHP",
-      "Video",
-      "Web App"
+      "PHP 8",
+      "MySQL",
+      "Vanilla JS"
     ],
     "link": "https://github.com/victorjimenezdev/videotube",
     "image": "https://placehold.co/600x400/1e1e2e/d63031?text=VideoTube",
@@ -766,9 +766,9 @@ export const personalProjects = [
     "title": "Jira Extractor",
     "description": "JavaScript tool for extracting and processing Jira data.",
     "tags": [
-      "JavaScript",
-      "Jira",
-      "Tools"
+      "Node.js",
+      "Jira API",
+      "Automation"
     ],
     "link": "https://github.com/victorjimenezdev/jiraextractor",
     "image": "https://placehold.co/600x400/1e1e2e/0984e3?text=Jira+Tool",
@@ -780,9 +780,8 @@ export const personalProjects = [
     "description": "Maintainer of this security-focused, read-only JSON snapshot endpoint for Drupal sites. Used in automation and CI workflows to provide context for AI agents and external tools.",
     "image": "https://via.placeholder.com/600x400/1e1e2e/6c5ce7?text=Context+Connector",
     "tags": [
-      "Drupal",
-      "Module",
-      "Automation",
+      "Drupal 10 Module",
+      "Security",
       "CI/CD"
     ],
     "link": "https://github.com/victorjimenezdev/project_context_connector",
@@ -793,8 +792,9 @@ export const personalProjects = [
     "title": "Social Tools",
     "description": "Utilities and scripts for social media integration.",
     "tags": [
-      "Tools",
-      "Social Media"
+      "Bash Scripting",
+      "Automation",
+      "API"
     ],
     "link": "https://github.com/victorjimenezdev/social-tools",
     "image": "https://placehold.co/600x400/1e1e2e/fdcb6e?text=Social+Tools",
@@ -805,9 +805,9 @@ export const personalProjects = [
     "title": "Link Saver Extension",
     "description": "A lightweight Chrome extension to save, organize, and quickly access your favorite links and snippets.",
     "tags": [
-      "Chrome Extension",
-      "JavaScript",
-      "Productivity"
+      "Chrome Extension (MV3)",
+      "Local Storage",
+      "JavaScript"
     ],
     "link": "https://github.com/victorjimenezdev/link-saver",
     "image": "https://placehold.co/600x400/1e1e2e/a29bfe?text=Link+Saver",
