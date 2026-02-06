@@ -818,9 +818,9 @@ export const personalProjects = [
     "title": "ChatGPT Enhancer",
     "description": "Browser extension integration for ChatGPT to improve workflow and accessibility.",
     "tags": [
-      "Chrome Extension",
-      "AI",
-      "ChatGPT"
+      "Chrome Extension (MV3)",
+      "DOM Manipulation",
+      "AI Integration"
     ],
     "link": "https://github.com/victorjimenezdev/chatgptextension",
     "image": "https://placehold.co/600x400/1e1e2e/00cec9?text=ChatGPT+Ext",
@@ -831,8 +831,8 @@ export const personalProjects = [
     "title": "Drupal Contributions",
     "description": "Extensive contributions to the Drupal ecosystem, including modules and core patches.",
     "tags": [
-      "Drupal",
-      "PHP",
+      "Drupal Core",
+      "PHP 8",
       "Open Source"
     ],
     "link": "https://www.drupal.org/user/3593952/",
