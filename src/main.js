@@ -2,9 +2,17 @@ import './style.css'
 import { workProjects, personalProjects } from './data/projects.js'
 
 const TECH_STACK = [
-  'Drupal 10', 'WordPress', 'React', 'Next.js', 'Vite', 'Node.js',
-  'PHP 8', 'MySQL', 'Redis', 'Varnish', 'AWS', 'Docker',
-  'Lando', 'GitHub Actions', 'Tailwind', 'SASS'
+  { name: 'Drupal', icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-5.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5zm4 0c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5z"/></svg>' }, // Drupal drop simplified
+  { name: 'WordPress', icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.64 5.93h1.33v1.94h-1.33zm-4.75 0h1.33v1.94H6.89zm9.5 0h1.33v1.94h-1.33zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>' }, // WP W simplified
+  { name: 'React', icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>' }, // React Atom simplified
+  { name: 'Next.js', icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>' }, // "N" simplified
+  { name: 'Vite', icon: '⚡' },
+  { name: 'Node.js', icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>' },
+  { name: 'PHP 8', icon: '🐘' },
+  { name: 'MySQL', icon: '🐬' },
+  { name: 'AWS', icon: '☁️' },
+  { name: 'Docker', icon: '🐳' },
+  { name: 'GraphQL', icon: '◈' }
 ];
 
 // Main entry point
@@ -119,7 +127,8 @@ const init = () => {
   if (marqueeTrack) {
     const icons = TECH_STACK.map(tech => `
       <div class="tech-icon">
-        <span>${tech}</span>
+        <span style="font-size: 2.5rem; height: 40px; display: flex; align-items: center;">${tech.icon}</span>
+        <span style="font-size: 0.9rem; font-weight: 500;">${tech.name}</span>
       </div>
     `).join('');
     // Duplicate for infinite scroll
