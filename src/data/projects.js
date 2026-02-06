@@ -732,7 +732,7 @@ export const personalProjects = [
       "Google Cloud"
     ],
     "link": "https://github.com/victorjimenezdev/gtm-api",
-    "image": "https://placehold.co/600x400/1e1e2e/e17055?text=GTM+API",
+    "image": "/images/projects/nano-banana-neon.png",
     "featured": false
   },
   {
@@ -745,7 +745,7 @@ export const personalProjects = [
       "Security"
     ],
     "link": "https://github.com/victorjimenezdev/project-context-connector-wp",
-    "image": "https://placehold.co/600x400/1e1e2e/00b894?text=WP+Connector",
+    "image": "/images/projects/nano-banana-circuit.png",
     "featured": false
   },
   {
@@ -758,7 +758,7 @@ export const personalProjects = [
       "Vanilla JS"
     ],
     "link": "https://github.com/victorjimenezdev/videotube",
-    "image": "https://placehold.co/600x400/1e1e2e/d63031?text=VideoTube",
+    "image": "/images/projects/nano-banana-neon.png",
     "featured": false
   },
   {
@@ -771,7 +771,7 @@ export const personalProjects = [
       "Automation"
     ],
     "link": "https://github.com/victorjimenezdev/jiraextractor",
-    "image": "https://placehold.co/600x400/1e1e2e/0984e3?text=Jira+Tool",
+    "image": "/images/projects/nano-banana-circuit.png",
     "featured": false
   },
   {
@@ -785,6 +785,7 @@ export const personalProjects = [
       "CI/CD"
     ],
     "link": "https://github.com/victorjimenezdev/project_context_connector",
+    "image": "/images/projects/nano-banana-circuit.png",
     "featured": false
   },
   {
@@ -797,7 +798,7 @@ export const personalProjects = [
       "API"
     ],
     "link": "https://github.com/victorjimenezdev/social-tools",
-    "image": "https://placehold.co/600x400/1e1e2e/fdcb6e?text=Social+Tools",
+    "image": "/images/projects/nano-banana-circuit.png",
     "featured": false
   },
   {
@@ -810,7 +811,7 @@ export const personalProjects = [
       "JavaScript"
     ],
     "link": "https://github.com/victorjimenezdev/link-saver",
-    "image": "https://placehold.co/600x400/1e1e2e/a29bfe?text=Link+Saver",
+    "image": "/images/projects/nano-banana-neon.png",
     "featured": false
   },
   {
@@ -823,7 +824,7 @@ export const personalProjects = [
       "AI Integration"
     ],
     "link": "https://github.com/victorjimenezdev/chatgptextension",
-    "image": "https://placehold.co/600x400/1e1e2e/00cec9?text=ChatGPT+Ext",
+    "image": "/images/projects/nano-banana-neon.png",
     "featured": false
   },
   {
@@ -836,7 +837,7 @@ export const personalProjects = [
       "Open Source"
     ],
     "link": "https://www.drupal.org/user/3593952/",
-    "image": "https://placehold.co/600x400/1e1e2e/0984e3?text=Drupal+Dev",
+    "image": "/images/projects/nano-banana-circuit.png",
     "featured": true
   }
 ];
