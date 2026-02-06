@@ -158,6 +158,8 @@ export const workProjects = [
     "title": "Radial",
     "description": "Omnichannel commerce technology.",
     "tags": [
+      "WordPress",
+      "Pantheon",
       "Technology",
       "B2B"
     ],
@@ -169,7 +171,9 @@ export const workProjects = [
     "title": "Transfr Inc",
     "description": "VR training solutions.",
     "tags": [
-      "Tech",
+      "WordPress",
+      "Elementor",
+      "VR",
       "Education"
     ],
     "link": "https://transfrinc.com/",
@@ -180,6 +184,8 @@ export const workProjects = [
     "title": "King University",
     "description": "Higher education portal.",
     "tags": [
+      "WordPress",
+      "WP Engine",
       "Education",
       "University"
     ],
@@ -191,6 +197,7 @@ export const workProjects = [
     "title": "MOTOR Information Systems",
     "description": "Automotive data solutions.",
     "tags": [
+      "WordPress",
       "Automotive",
       "Data"
     ],
@@ -202,6 +209,8 @@ export const workProjects = [
     "title": "Wharton Magazine",
     "description": "Business school publication.",
     "tags": [
+      "WordPress",
+      "WP Engine",
       "Education",
       "Media"
     ],
@@ -394,6 +403,8 @@ export const workProjects = [
     "title": "Gestion Humana",
     "description": "Human resources management resource.",
     "tags": [
+      "Drupal",
+      "AWS",
       "HR",
       "Corporate"
     ],
@@ -406,6 +417,8 @@ export const workProjects = [
     "title": "Ambito Juridico",
     "description": "Legal news and resources platform.",
     "tags": [
+      "Drupal",
+      "AWS",
       "Legal",
       "News"
     ],
@@ -418,6 +431,8 @@ export const workProjects = [
     "title": "Legis Office",
     "description": "Legal practice management software site.",
     "tags": [
+      "Drupal",
+      "AWS",
       "Legal",
       "SaaS"
     ],
@@ -430,6 +445,8 @@ export const workProjects = [
     "title": "Politécnico Grancolombiano",
     "description": "Higher education university portal.",
     "tags": [
+      "Drupal",
+      "AngularJS",
       "Education",
       "University"
     ],
@@ -442,6 +459,8 @@ export const workProjects = [
     "title": "Universidad San Marcos",
     "description": "University educational platform.",
     "tags": [
+      "Drupal",
+      "AngularJS",
       "Education",
       "University"
     ],
@@ -454,6 +473,8 @@ export const workProjects = [
     "title": "Areandina",
     "description": "Fundación Universitaria del Área Andina website.",
     "tags": [
+      "Drupal",
+      "AngularJS",
       "Education",
       "University"
     ],
@@ -466,6 +487,8 @@ export const workProjects = [
     "title": "Tigo Pago Express (Regional)",
     "description": "Regional payment portals for Colombia, El Salvador, Honduras, and Paraguay.",
     "tags": [
+      "Drupal",
+      "AngularJS",
       "Telecommunications",
       "Payments"
     ],
@@ -478,6 +501,8 @@ export const workProjects = [
     "title": "Tigo Gestión",
     "description": "Corporate services management platform.",
     "tags": [
+      "Drupal",
+      "AngularJS",
       "Telecommunications",
       "B2B"
     ],
@@ -490,6 +515,8 @@ export const workProjects = [
     "title": "Mi Tigo",
     "description": "Self-service user portal for Tigo customers.",
     "tags": [
+      "Drupal",
+      "AngularJS",
       "Telecommunications",
       "Self-service"
     ],
@@ -514,6 +541,8 @@ export const workProjects = [
     "title": "CNO",
     "description": "Consejo Nacional de Operación website.",
     "tags": [
+      "Drupal",
+      "Pantheon",
       "Government",
       "Energy"
     ],
@@ -526,6 +555,7 @@ export const workProjects = [
     "title": "CVC Geo",
     "description": "Geographic information system for CVC.",
     "tags": [
+      "Drupal",
       "Environment",
       "GIS"
     ],
@@ -538,6 +568,7 @@ export const workProjects = [
     "title": "CVC",
     "description": "Corporación Autónoma Regional del Valle del Cauca.",
     "tags": [
+      "Drupal",
       "Environment",
       "Government"
     ],
@@ -550,6 +581,7 @@ export const workProjects = [
     "title": "Nestlé Health Science",
     "description": "Health and nutrition science corporate site.",
     "tags": [
+      "Drupal",
       "Health",
       "Corporate"
     ],
@@ -562,6 +594,7 @@ export const workProjects = [
     "title": "Vivendo",
     "description": "Real estate and housing platform.",
     "tags": [
+      "Drupal",
       "Real Estate",
       "Housing"
     ],
@@ -574,6 +607,8 @@ export const workProjects = [
     "title": "VaproShield",
     "description": "Construction materials and solutions.",
     "tags": [
+      "Drupal",
+      "Pantheon",
       "Construction",
       "Corporate"
     ],
@@ -586,6 +621,8 @@ export const workProjects = [
     "title": "Thnx4",
     "description": "Gratitude journal and social platform.",
     "tags": [
+      "Drupal",
+      "Pantheon",
       "Social",
       "Wellness"
     ],
@@ -598,6 +635,7 @@ export const workProjects = [
     "title": "Magisterio",
     "description": "Educational publishing and resources.",
     "tags": [
+      "Drupal",
       "Education",
       "Publishing"
     ],
@@ -610,10 +648,11 @@ export const workProjects = [
     "title": "Mexico Business Times",
     "description": "Business news and insights.",
     "tags": [
+      "Drupal",
       "News",
       "Business"
     ],
-    "link": "https://www.mexicobusinesstimes.com",
+    "link": "https://mexicobusiness.pub/",
     "image": "/images/projects/mexico-business.jpg",
     "featured": false
   },
@@ -622,6 +661,8 @@ export const workProjects = [
     "title": "Mont Blanc Natural Resort",
     "description": "Resort and tourism destination site.",
     "tags": [
+      "Drupal",
+      "AWS",
       "Tourism",
       "Hospitality"
     ],
@@ -634,6 +675,8 @@ export const workProjects = [
     "title": "Le Castel Blanc",
     "description": "Hospitality website.",
     "tags": [
+      "Drupal",
+      "AWS",
       "Hospitality",
       "Hotel"
     ],
@@ -646,6 +689,7 @@ export const workProjects = [
     "title": "El Heraldo",
     "description": "Major Colombian newspaper website.",
     "tags": [
+      "Drupal",
       "News",
       "Media"
     ],
@@ -658,6 +702,7 @@ export const workProjects = [
     "title": "Lotería de Medellín",
     "description": "Official lottery institution portal.",
     "tags": [
+      "Drupal",
       "Government",
       "Gaming"
     ],
@@ -670,6 +715,7 @@ export const workProjects = [
     "title": "Guías de Turismo Col",
     "description": "Tourism guides and information.",
     "tags": [
+      "CakePHP",
       "Tourism",
       "Travel"
     ],
@@ -682,6 +728,7 @@ export const workProjects = [
     "title": "Adoomicilio",
     "description": "Delivery/Service platform.",
     "tags": [
+      "CakePHP",
       "E-commerce",
       "Services"
     ],
@@ -694,6 +741,7 @@ export const workProjects = [
     "title": "Cremil",
     "description": "Caja de Retiro de las Fuerzas Militares.",
     "tags": [
+      "JSF",
       "Government",
       "Military"
     ],
@@ -706,6 +754,7 @@ export const workProjects = [
     "title": "Coljuegos",
     "description": "Regulatory body for gaming in Colombia.",
     "tags": [
+      "PHP",
       "Government",
       "Regulatory"
     ],
