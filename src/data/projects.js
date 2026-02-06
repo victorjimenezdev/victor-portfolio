@@ -31,7 +31,7 @@ export const workProjects = [
     "title": "Sonesta Hotels",
     "description": "Hospitality and hotel booking platform.",
     "tags": [
-      "Drupal 9",
+      "Drupal",
       "Acquia Cloud",
       "React"
     ],
@@ -68,7 +68,7 @@ export const workProjects = [
     "title": "Arcadia University",
     "description": "University website platform.",
     "tags": [
-      "Drupal 9",
+      "Drupal",
       "Pantheon",
       "Higher Ed"
     ],
@@ -92,7 +92,7 @@ export const workProjects = [
     "title": "Philadelphia Cultural Alliance",
     "description": "Cultural organization portal.",
     "tags": [
-      "Drupal 9",
+      "Drupal",
       "Bootstrap",
       "Non-profit"
     ],
@@ -116,7 +116,7 @@ export const workProjects = [
     "title": "Temple Health",
     "description": "Academic health system.",
     "tags": [
-      "Drupal 9",
+      "Drupal",
       "Acquia Cloud",
       "Health"
     ],
@@ -338,7 +338,7 @@ export const workProjects = [
     "title": "PAHO / WHO",
     "description": "Pan American Health Organization platform.",
     "tags": [
-      "Drupal 9",
+      "Drupal",
       "Pantheon",
       "Health"
     ],
@@ -780,7 +780,7 @@ export const personalProjects = [
     "description": "Maintainer of this security-focused, read-only JSON snapshot endpoint for Drupal sites. Used in automation and CI workflows to provide context for AI agents and external tools.",
     "image": "/images/projects/project-context-connector.png",
     "tags": [
-      "Drupal 10 Module",
+      "Drupal",
       "Security",
       "CI/CD"
     ],
@@ -831,7 +831,7 @@ export const personalProjects = [
     "title": "Drupal Contributions",
     "description": "Extensive contributions to the Drupal ecosystem, including modules and core patches.",
     "tags": [
-      "Drupal Core",
+      "Drupal",
       "PHP 8",
       "Open Source"
     ],
