@@ -347,7 +347,6 @@ export const workProjects = [
     "link": "https://www.pensions.org/",
     "image": "/images/projects/pensions.jpg"
   },
-
   {
     "id": "paho",
     "title": "PAHO / WHO",
