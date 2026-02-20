@@ -363,7 +363,9 @@ const fetchDevtoArticles = async () => {
   const grid = document.getElementById('writing-grid');
   if (!grid) return;
   try {
-    const res = await fetch('https://dev.to/api/articles?username=victorstackai');
+    // Dev.to public API aggressively caches. Use a 5-minute rotating cache buster to fetch fresh articles.
+    const cacheBuster = Math.floor(Date.now() / 300000);
+    const res = await fetch(`https://dev.to/api/articles?username=victorstackai&t=${cacheBuster}`);
     const articles = await res.json();
     if (articles && articles.length > 0) {
       grid.innerHTML = articles.slice(0, 3).map(article => `
