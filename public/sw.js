@@ -1,9 +1,7 @@
-const CACHE_NAME = 'victor-portfolio-v1';
+const CACHE_NAME = 'victor-portfolio-v2';
 const ASSETS_TO_CACHE = [
     '/',
     '/index.html',
-    '/src/style.css',
-    '/src/main.js',
     '/victorstack.png',
     '/vite.svg'
 ];
