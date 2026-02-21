@@ -363,11 +363,11 @@ const fetchDevtoArticles = async () => {
   const grid = document.getElementById('writing-grid');
   if (!grid) return;
   try {
-    // Dev.to public API aggressively caches. Use a 5-minute rotating cache buster to fetch fresh articles.
-    const cacheBuster = Math.floor(Date.now() / 300000);
-    const res = await fetch(`https://dev.to/api/articles?username=victorstackai&t=${cacheBuster}`);
+    // Use state=fresh + per_page=30 + per-visit cache buster to bypass Dev.to CDN caching.
+    const res = await fetch(`https://dev.to/api/articles?username=victorstackai&state=fresh&per_page=30&t=${Date.now()}`);
     const articles = await res.json();
     if (articles && articles.length > 0) {
+      articles.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
       grid.innerHTML = articles.slice(0, 3).map(article => `
         <article class="glass-panel project-card" style="overflow: hidden; display: flex; flex-direction: column; height: 100%; transform-style: preserve-3d;">
             <div style="height: 200px; overflow: hidden; position: relative; border-radius: 8px 8px 0 0; transform: translateZ(20px);">
