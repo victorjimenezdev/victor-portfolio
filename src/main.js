@@ -2,6 +2,9 @@ import './style.css'
 import { workProjects, personalProjects } from './data/projects.js'
 import VanillaTilt from 'vanilla-tilt';
 
+// Disable 3D GPU effects on touch devices to prevent iOS WebKit tab crash
+const isTouchDevice = window.matchMedia('(hover: none)').matches;
+
 
 
 // Main entry point
@@ -64,13 +67,15 @@ const init = () => {
   // Render Personal Projects (show button)
   renderGrid('projects-grid', personalProjects, { showLinkButton: true, isWork: false });
 
-  // 3D Tilt Effect on Rendered Cards
-  VanillaTilt.init(document.querySelectorAll(".project-card"), {
-    max: 5,
-    speed: 400,
-    glare: true,
-    "max-glare": 0.1,
-  });
+  // 3D Tilt Effect on Rendered Cards (desktop only - causes iOS WebKit crash on mobile)
+  if (!isTouchDevice) {
+    VanillaTilt.init(document.querySelectorAll(".project-card"), {
+      max: 5,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.1,
+    });
+  }
 
   // Scroll Progress Logic
   const progressBar = document.getElementById('scroll-progress');
@@ -192,8 +197,8 @@ const renderGrid = (elementId, data, config = { showLinkButton: true, isWork: fa
   if (data.length === 0) return;
 
   grid.innerHTML = data.map(project => `
-        <article class="glass-panel project-card" style="overflow: hidden; display: flex; flex-direction: column; height: 100%; transform-style: preserve-3d;">
-            <div class="skeleton" style="height: 200px; overflow: hidden; position: relative; border-radius: 8px 8px 0 0; transform: translateZ(20px);">
+        <article class="glass-panel project-card" style="overflow: hidden; display: flex; flex-direction: column; height: 100%; ${isTouchDevice ? '' : 'transform-style: preserve-3d;'}">
+            <div class="skeleton" style="height: 200px; overflow: hidden; position: relative; border-radius: 8px 8px 0 0; ${isTouchDevice ? '' : 'transform: translateZ(20px);'}">
                 ${config.isWork ? `<a href="${project.link}" target="_blank" rel="nofollow noreferrer noopener" style="display:block; height:100%;" aria-label="View ${project.title}" data-track="click_project_image" data-track-category="projects" data-track-label="${project.title}">` : ''}
                 <img src="${project.image}" alt="${project.title} Preview" loading="lazy" decoding="async" class="img-loading" width="400" height="225"
                      style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;"
@@ -337,7 +342,7 @@ const fetchGithubActivity = async () => {
     const repos = await res.json();
     if (repos && repos.length > 0) {
       container.innerHTML = repos.map(repo => `
-        <a href="${repo.html_url}" target="_blank" class="glass-panel project-card" style="display: block; padding: 1.5rem; text-decoration: none; transform-style: preserve-3d; border-left: 4px solid var(--primary);">
+        <a href="${repo.html_url}" target="_blank" class="glass-panel project-card" style="display: block; padding: 1.5rem; text-decoration: none; ${isTouchDevice ? '' : 'transform-style: preserve-3d;'} border-left: 4px solid var(--primary);">
           <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.8rem;">
             <h4 style="margin: 0; color: var(--text-primary); font-size: 1.1rem;">${repo.name}</h4>
             <span style="font-size: 0.8rem; background: rgba(108, 92, 231, 0.1); padding: 0.2rem 0.6rem; border-radius: 12px; color: var(--primary);">★ ${repo.stargazers_count}</span>
@@ -349,7 +354,7 @@ const fetchGithubActivity = async () => {
           </div>
         </a>
       `).join('');
-      VanillaTilt.init(container.querySelectorAll(".project-card"), { max: 5, speed: 400, glare: true, "max-glare": 0.1 });
+      if (!isTouchDevice) VanillaTilt.init(container.querySelectorAll(".project-card"), { max: 5, speed: 400, glare: true, "max-glare": 0.1 });
     } else {
       container.innerHTML = `<div class="glass-panel" style="padding: 2rem; text-align: center; color: var(--text-secondary); grid-column: 1 / -1;"><p>No public activity found.</p></div>`;
     }
@@ -369,8 +374,8 @@ const fetchDevtoArticles = async () => {
     if (articles && articles.length > 0) {
       articles.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
       grid.innerHTML = articles.slice(0, 3).map(article => `
-        <article class="glass-panel project-card" style="overflow: hidden; display: flex; flex-direction: column; height: 100%; transform-style: preserve-3d;">
-            <div style="height: 200px; overflow: hidden; position: relative; border-radius: 8px 8px 0 0; transform: translateZ(20px);">
+        <article class="glass-panel project-card" style="overflow: hidden; display: flex; flex-direction: column; height: 100%; ${isTouchDevice ? '' : 'transform-style: preserve-3d;'}">
+            <div style="height: 200px; overflow: hidden; position: relative; border-radius: 8px 8px 0 0; ${isTouchDevice ? '' : 'transform: translateZ(20px);'}">
                 <a href="${article.url}" target="_blank" rel="nofollow noreferrer noopener" style="display:block; height:100%;">
                 <img src="${article.cover_image || article.social_image}" alt="${article.title}" loading="lazy" decoding="async" class="img-loaded" width="400" height="225"
                      style="width: 100%; height: 100%; object-fit: cover;">
@@ -397,7 +402,7 @@ const fetchDevtoArticles = async () => {
             </div>
         </article>
       `).join('');
-      VanillaTilt.init(grid.querySelectorAll(".project-card"), { max: 5, speed: 400, glare: true, "max-glare": 0.1 });
+      if (!isTouchDevice) VanillaTilt.init(grid.querySelectorAll(".project-card"), { max: 5, speed: 400, glare: true, "max-glare": 0.1 });
     } else {
       grid.innerHTML = `<div class="glass-panel" style="padding: 2rem; text-align: center; color: var(--text-secondary); grid-column: 1 / -1;"><p>No recent articles found.</p></div>`;
     }
