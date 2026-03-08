@@ -64,6 +64,38 @@ const init = () => {
   // Render Work Projects (hide button, make image clickable)
   renderGrid('work-grid', workProjects, { showLinkButton: false, isWork: true });
 
+  // Setup CMS Filtering Logic for Work Projects
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  if (filterBtns.length > 0) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        // Update active state
+        filterBtns.forEach(b => {
+          b.classList.remove('active');
+          b.style.background = 'transparent';
+          b.style.color = 'var(--primary)';
+        });
+        const target = e.target;
+        target.classList.add('active');
+        target.style.background = 'var(--primary)';
+        target.style.color = 'white';
+
+        // Filter logic
+        const filterValue = target.getAttribute('data-filter');
+        let filteredProjects = workProjects;
+
+        if (filterValue !== 'all') {
+          filteredProjects = workProjects.filter(project => {
+            return project.tags.some(tag => tag.toLowerCase() === filterValue);
+          });
+        }
+
+        // Re-render
+        renderGrid('work-grid', filteredProjects, { showLinkButton: false, isWork: true });
+      });
+    });
+  }
+
   // Render Personal Projects (show button)
   renderGrid('projects-grid', personalProjects, { showLinkButton: true, isWork: false });
 
