@@ -839,15 +839,16 @@ export const personalProjects = [
   {
     "id": "project-context-connector-wp",
     "title": "Project Context Connector WP",
-    "description": "WordPress integration for Project Context Connector.",
+    "description": "WordPress integration for Project Context Connector. Provides a secure, read-only JSON snapshot of site context to feed LLMs and Agent workflows.",
     "tags": [
       "WordPress Plugin",
       "PHP 8",
+      "AI Context",
       "Security"
     ],
     "link": "https://github.com/victorjimenezdev/project-context-connector-wp",
     "image": "/images/projects/project-context-connector-wp.png",
-    "featured": false
+    "featured": true
   },
   {
     "id": "videotube",
@@ -883,10 +884,11 @@ export const personalProjects = [
     "tags": [
       "Drupal",
       "Security",
+      "AI Context",
       "CI/CD"
     ],
     "link": "https://github.com/victorjimenezdev/project_context_connector",
-    "featured": false
+    "featured": true
   },
   {
     "id": "social-tools",
